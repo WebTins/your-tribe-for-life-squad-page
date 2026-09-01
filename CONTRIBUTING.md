@@ -2,11 +2,6 @@
 [Figma](https://www.figma.com/design/zsrLhtyXdZ4oehOyeBvTDR/Untitled?node-id=0-1&t=uEoXInM6LWD9o8cZ-1)
 <img width="4756" height="3364" alt="image" src="https://github.com/user-attachments/assets/1e13a37f-5001-4474-bf97-e53e07406867" />
 
-
-## Git afspraken
-### Taal
-Documenteer in het engels (issues, commit messages etc)
-
 ## Code Conventions
 
 ### Whitespace
