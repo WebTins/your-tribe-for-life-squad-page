@@ -22,6 +22,7 @@
         />
 
         <img
+          class="masked-image"
           src="https://fdnd.directus.app/assets/{person.mugshot}?height=700&quality=80"
           width={person.mugshot.width}
           height={person.mugshot.height}
@@ -30,9 +31,16 @@
       </picture>
     {:else}
       <img
+        class="masked-image placeholder"
         src="/assets/person-placeholder.png"
         alt="Geen afbeelding beschikbaar"
       />
     {/if}
   </article>
 {/each}
+
+<style>
+  .masked-image {
+    clip-path: polygon(7% 4%, 76% 15%, 83% 41%, 68% 91%, 11% 98%, 4% 64%);
+  }
+</style>
