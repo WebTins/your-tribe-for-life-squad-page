@@ -40,6 +40,26 @@
 {/each}
 
 <style>
+  @font-face {
+    font-family: "Just Me Again Down Here";
+    src: url("src/lib/fonts/JustMeAgainDownHere-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("src/lib/fonts/Poppins-Medium.ttf") format("truetype");
+  }
+
+  h2 {
+    font-family: "Just Me Again Down Here";
+    font-weight: 400;
+    font-size: 3rem;
+  }
+
+  p {
+    font-family: "Poppins";
+  }
+
   .masked-image {
     clip-path: polygon(7% 4%, 76% 15%, 83% 41%, 68% 91%, 11% 98%, 4% 64%);
   }
