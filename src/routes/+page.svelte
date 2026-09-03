@@ -6,8 +6,10 @@
 
 {#each persons as person}
   <article class="person-card">
-    <h2>{person.name}</h2>
-    <p>{person.residency}</p>
+    <div class="person-information">
+      <h2>{person.name}</h2>
+      <p>{person.residency}</p>
+    </div>
 
     {#if person.mugshot}
       <picture class="mugshot">
@@ -64,6 +66,8 @@
     font-family: "Just Me Again Down Here";
     font-weight: 400;
     font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
   p {
@@ -71,17 +75,29 @@
     font-size: 1rem;
   }
 
+  .person-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .person-information {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+
   .mugshot {
     display: block;
     width: 450px;
     height: 400px;
-  }
 
-  .masked-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    .masked-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 
-    clip-path: polygon(24% 4%, 71% 14%, 78% 47%, 72% 84%, 24% 89%, 17% 64%);
+      clip-path: polygon(24% 4%, 71% 14%, 78% 47%, 72% 84%, 24% 89%, 17% 64%);
+    }
   }
 </style>
