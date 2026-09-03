@@ -21,6 +21,8 @@
     * {
         box-sizing: border-box;
         margin: 0;
+
+        --shade-accent: #8c8c8c;
     }
 
     @font-face {
@@ -85,7 +87,7 @@
             padding: 1rem;
 
             p {
-                color: #8C8C8C;
+                color: var(--shade-accent);
                 padding: 1rem;
                 width: 60ch;
                 font-weight: 600;
