@@ -10,7 +10,7 @@
     <p>{person.residency}</p>
 
     {#if person.mugshot}
-      <picture>
+      <picture class="mugshot">
         <source
           type="image/avif"
           srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=avif&height=700&quality=80"
@@ -71,7 +71,17 @@
     font-size: 1rem;
   }
 
+  .mugshot {
+    display: block;
+    width: 450px;
+    height: 400px;
+  }
+
   .masked-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
     clip-path: polygon(24% 4%, 71% 14%, 78% 47%, 72% 84%, 24% 89%, 17% 64%);
   }
 </style>
