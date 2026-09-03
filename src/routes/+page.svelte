@@ -50,6 +50,16 @@
     src: url("src/lib/fonts/Poppins-Medium.ttf") format("truetype");
   }
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+
   h2 {
     font-family: "Just Me Again Down Here";
     font-weight: 400;
@@ -58,9 +68,10 @@
 
   p {
     font-family: "Poppins";
+    font-size: 1rem;
   }
 
   .masked-image {
-    clip-path: polygon(7% 4%, 76% 15%, 83% 41%, 68% 91%, 11% 98%, 4% 64%);
+    clip-path: polygon(24% 4%, 71% 14%, 78% 47%, 72% 84%, 24% 89%, 17% 64%);
   }
 </style>
