@@ -35,9 +35,11 @@
       {:else}
         <img
           class="masked-image placeholder"
-          src="/assets/person-placeholder.png"
+          src="src/lib/assets/person-placeholder.png"
           alt="Geen afbeelding beschikbaar"
         />
+
+        <!-- <p>Person is getting a coffee...</p> -->
       {/if}
     </article>
   {/each}
@@ -80,6 +82,9 @@
   .squadpage {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-left: 15px;
+    padding-right: 15px;
+    /* overflow: hidden; */
   }
 
   .person-card {
@@ -93,7 +98,8 @@
     transform: translateY(200px);
   }
 
-  .mugshot {
+  .mugshot,
+  .masked-image.placeholder {
     display: block;
     width: 450px;
     height: 400px;
