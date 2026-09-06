@@ -1,6 +1,7 @@
 <script>
-    import { page } from '$app/state';
-    let src = '/src/lib/assets/spilled-coffee.png';
+    import { page } from '$app/state'
+    import BackButton from '$lib/components/BackButton.svelte';
+    let src = '/src/lib/assets/spilled-coffee.png'
     let alt = 'spilled coffee'
 </script>
 
@@ -14,6 +15,8 @@
         <h2 class="error-message">ERROR: PAGE NOT FOUND</h2>
         <p>We couldn't find the page you were looking for... maybe it's time for a coffee break?</p>
     </section>
+
+    <BackButton /> 
 </main>
 
 <style>
