@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte'
+	import logo from '$lib/assets/2G.png'
 
 	let hours = $state(0)
 	let minutes = $state(0)
@@ -38,18 +39,17 @@
 
 <header class="countdown-wrapper">
 	<section class="countdown-clock">
-		<div class="squad-info">
-			<h2>2G</h2>
-			<p>Squadpage</p>
-		</div>
+		<a href="/" class="squad-info">
+			<img src={logo} alt="2G Squadpage logo">
+		</a>
 
 		<div class="coffee-time">
-			<h2>
+			<time>
 				<!-- Add a zero when the number has one digit -->
 				{String(hours).padStart(2, '0')}:
 				{String(minutes).padStart(2, '0')}:
 				{String(seconds).padStart(2, '0')}
-			</h2>
+			</time>
 
 			<p>left for coffeetime</p>
 		</div>
@@ -57,12 +57,6 @@
 </header>
 
 <style>
-	:global(:root) {
-		--countdown-background: #000000;
-		--countdown-text: #ffffff;
-		--countdown-width: 400px;
-	}
-
 	.countdown-wrapper {
 		position: sticky;
 		top: 20px;
@@ -92,26 +86,24 @@
 		);
 
 		.squad-info {
-			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-			h2 {
-				margin: 0;
-				font-size: 32px;
-			}
-
-			p {
-				margin: 0;
-				font-size: 16px;
-				line-height: 1.5;
+			img {
+				display: block;
+				width: 70px;
+				height: auto;
 			}
 		}
 
 		.coffee-time {
 			text-align: center;
 
-			h2 {
-				margin: 0;
+			time {
+				display: block;
 				font-size: 32px;
+				font-weight: bold;
 			}
 
 			p {
