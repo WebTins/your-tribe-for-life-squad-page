@@ -38,6 +38,21 @@
         src: url(/src/lib/assets/JustMeAgainDownHere-Regular.ttf)
     }
 
+    @keyframes --spill {
+        0% {
+                scale: 1;
+                
+        }
+        50% {
+                scale: 1.2;
+                
+        }
+        100% {
+                scale: 1;
+                
+        }
+    }
+
     main {
         position: absolute;
         top: 0;
@@ -77,6 +92,10 @@
                 -webkit-transform: scaleX(-1);
                 transform: scaleX(-1);
                 rotate: 30deg;
+
+                animation-name: --spill;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
             }
         }
 
