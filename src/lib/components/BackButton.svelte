@@ -9,13 +9,24 @@
 
 <style>
     .back-button {
-        background: #000000;
+        position: absolute;
+        left: 12em;
+        bottom: 1em;
+
+        display: flex;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #000000;
+        font-weight: 600;
         color: white;
-        border: none;
+
         width: 200px;
         height: 150px;
-        cursor: pointer;
 
+        cursor: pointer;
+        z-index: 1;
         padding: 1rem 2rem;
 
         clip-path: polygon(
