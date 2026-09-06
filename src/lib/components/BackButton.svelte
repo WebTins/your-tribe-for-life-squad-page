@@ -27,6 +27,7 @@
 
         cursor: pointer;
         z-index: 1;
+        transition: mask-position 1.5s ease-in-out,-webkit-mask-position 1.5s ease-in-out;
         padding: 1rem 2rem;
 
         clip-path: polygon(
@@ -38,5 +39,25 @@
             16% 64%,
             0% 50%
         );
+
+        -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+        mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+        -webkit-mask-size: 800%;
+        mask-size: 800%;
+        -webkit-mask-position: 0;
+        mask-position: 0;
+
+        span {
+            display: flex;
+            gap: 1em;
+            transform: translateY(-.5em);
+        }
+    }
+
+    .back-button:hover {
+        transition: mask-position 1.5s ease ease-in-out,-webkit-mask-position 1.5s ease-in-out;
+        -webkit-mask-position: 120%;
+        mask-position: 120%;
+        opacity: 1;
     }
 </style>
