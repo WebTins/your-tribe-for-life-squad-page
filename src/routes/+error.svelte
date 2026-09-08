@@ -1,6 +1,7 @@
 <script>
     import { page } from '$app/state'
     import BackButton from '$lib/components/BackButton.svelte';
+    import Poppins from '$lib/assets/Poppins-Regular.ttf';
     let src = '/src/lib/assets/spilled-coffee.png'
     let alt = 'spilled coffee'
 </script>
@@ -35,7 +36,7 @@
 
         @font-face {
         font-family: Write;
-        src: url(/src/lib/assets/JustMeAgainDownHere-Regular.ttf)
+        src: url('${Poppins}') format('truetype');
     }
 
     @keyframes --coffee-spill {
