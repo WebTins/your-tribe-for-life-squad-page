@@ -10,7 +10,7 @@
 <style>
     .back-button {
         position: relative;
-        right: 20em;
+        right: 25em;
         top: 10em;
 
         display: flex;
