@@ -68,6 +68,16 @@
         }
     }
 
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
     main {
         position: absolute;
         top: 0;
@@ -82,6 +92,10 @@
         min-height: 100vh;
         text-align: center;
         font-family: Poppins;
+
+        @supports (animation-timeline: view()) {
+            animation: fade-in .3s ease-in-out;
+        }
 
         .top-content {
             position: relative;
