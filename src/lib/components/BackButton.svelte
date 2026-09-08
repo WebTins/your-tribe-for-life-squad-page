@@ -9,13 +9,13 @@
 
 <style>
     .back-button {
-        position: absolute;
-        left: 12em;
-        bottom: 1em;
+        position: relative;
+        right: 20em;
+        top: 10em;
 
         display: flex;
         text-decoration: none;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
 
         background-color: #000000;
