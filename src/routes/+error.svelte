@@ -53,6 +53,21 @@
         }
     }
 
+    @keyframes --hovering {
+        0% {
+                rotate: -5deg;
+                
+        }
+        50% {
+                rotate: 5deg;
+                
+        }
+        100% {
+                rotate: -5deg;
+                
+        }
+    }
+
     main {
         position: absolute;
         top: 0;
@@ -82,6 +97,9 @@
                 position: absolute;
                 z-index: 1;
                 font-size: 10em;
+                animation-name: --hovering;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
             }
 
             img {
@@ -94,7 +112,7 @@
                 rotate: 30deg;
 
                 animation-name: --spill;
-                animation-duration: 4s;
+                animation-duration: 3s;
                 animation-iteration-count: infinite;
             }
         }
@@ -115,6 +133,5 @@
                 font-weight: 600;
             }
         }
-    }
-
+    }   
 </style>
