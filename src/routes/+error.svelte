@@ -38,7 +38,7 @@
         src: url(/src/lib/assets/JustMeAgainDownHere-Regular.ttf)
     }
 
-    @keyframes --spill {
+    @keyframes --coffee-spill {
         0% {
                 scale: 1;
                 
@@ -53,7 +53,7 @@
         }
     }
 
-    @keyframes --hovering {
+    @keyframes --hover-shine {
         0% {
                 rotate: -5deg;
                 
@@ -111,7 +111,7 @@
                 position: absolute;
                 z-index: 1;
                 font-size: 10em;
-                animation-name: --hovering;
+                animation-name: --hover-shine;
                 animation-duration: 3s;
                 animation-iteration-count: infinite;
             }
@@ -125,7 +125,7 @@
                 transform: scaleX(-1);
                 rotate: 30deg;
 
-                animation-name: --spill;
+                animation-name: --coffee-spill;
                 animation-duration: 3s;
                 animation-iteration-count: infinite;
             }
