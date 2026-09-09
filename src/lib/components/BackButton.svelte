@@ -52,12 +52,12 @@
             gap: 1em;
             transform: translateY(-.5em);
         }
-    }
 
-    .back-button:hover {
-        transition: mask-position 1.5s ease ease-in-out,-webkit-mask-position 1.5s ease-in-out;
-        -webkit-mask-position: 120%;
-        mask-position: 120%;
-        opacity: 1;
+        &:hover {
+            transition: mask-position 1.5s ease ease-in-out,-webkit-mask-position 1.5s ease-in-out;
+            -webkit-mask-position: 120%;
+            mask-position: 120%;
+            opacity: 1;
+        }
     }
 </style>
