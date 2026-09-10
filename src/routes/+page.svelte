@@ -6,42 +6,40 @@
 
 <section class="squadpage">
   {#each persons as person}
-    <article class="person-card">
-      <div class="person-information">
-        <h2>{person.name}</h2>
-        <p>{person.residency}</p>
-      </div>
-
-      {#if person.mugshot}
-        <picture class="mugshot">
-          <source
-            type="image/avif"
-            srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=avif&height=700&quality=80"
-          />
-
-          <source
-            type="image/webp"
-            srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=webp&height=700&quality=80"
-          />
-
+    <a class="person-card-wrapper" href="/person/{person.id}">
+      <article class="person-card">
+        <div class="person-information">
+          <h2>{person.name}</h2>
+          <p>{person.residency}</p>
+        </div>
+        {#if person.mugshot}
+          <picture class="mugshot">
+            <source
+              type="image/avif"
+              srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=avif&height=700&quality=80"
+            />
+            <source
+              type="image/webp"
+              srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=webp&height=700&quality=80"
+            />
+            <img
+              class="masked-image"
+              src="https://fdnd.directus.app/assets/{person.mugshot}?height=700&quality=80"
+              width={person.mugshot.width}
+              height={person.mugshot.height}
+              alt="Afbeelding van {person.name}"
+            />
+          </picture>
+        {:else}
           <img
-            class="masked-image"
-            src="https://fdnd.directus.app/assets/{person.mugshot}?height=700&quality=80"
-            width={person.mugshot.width}
-            height={person.mugshot.height}
-            alt="Afbeelding van {person.name}"
+            class="masked-image placeholder"
+            src="src/lib/assets/person-placeholder.png"
+            alt="Geen afbeelding beschikbaar"
           />
-        </picture>
-      {:else}
-        <img
-          class="masked-image placeholder"
-          src="src/lib/assets/person-placeholder.png"
-          alt="Geen afbeelding beschikbaar"
-        />
-
-        <!-- <p>Person is getting a coffee...</p> -->
-      {/if}
-    </article>
+          <!-- <p>Person is getting a coffee...</p> -->
+        {/if}
+      </article>
+    </a>
   {/each}
 </section>
 
@@ -85,44 +83,65 @@
     padding-left: 15px;
     padding-right: 15px;
     /* overflow: hidden; */
+
+    .person-card-wrapper {
+      text-decoration: none;
+      color: inherit;
+
+      .person-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .person-information {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+        }
+
+        .mugshot,
+        .masked-image.placeholder {
+          display: block;
+          width: 450px;
+          height: 400px;
+          /* filter: grayscale(1); */
+        }
+
+        .masked-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          transition: filter 0.3s ease;
+          filter: grayscale(1);
+
+          clip-path: polygon(
+            24% 4%,
+            71% 14%,
+            78% 47%,
+            72% 84%,
+            24% 89%,
+            17% 64%
+          );
+        }
+      }
+    }
   }
 
-  .person-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .person-card:nth-child(4n + 2),
-  .person-card:nth-child(4n + 4) {
+  .person-card-wrapper:nth-child(4n + 2),
+  .person-card-wrapper:nth-child(4n + 4) {
     transform: translateY(200px);
   }
 
-  .mugshot,
-  .masked-image.placeholder {
-    display: block;
-    width: 450px;
-    height: 400px;
-  }
-
-  .masked-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    clip-path: polygon(24% 4%, 71% 14%, 78% 47%, 72% 84%, 24% 89%, 17% 64%);
-  }
-
-  .person-card:nth-child(4n + 2) .masked-image,
-  .person-card:nth-child(4n + 4) .masked-image {
+  .person-card-wrapper:nth-child(4n + 2) .masked-image,
+  .person-card-wrapper:nth-child(4n + 4) .masked-image {
     clip-path: polygon(76% 4%, 29% 14%, 22% 47%, 28% 84%, 76% 89%, 83% 64%);
 
     transform: scaleX(-1);
   }
 
-  .person-information {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  .person-card-wrapper:hover .mugshot .masked-image,
+  .person-card-wrapper:focus .mugshot .masked-image {
+    filter: grayscale(0);
   }
 </style>
