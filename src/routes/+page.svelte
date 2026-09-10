@@ -104,12 +104,16 @@
           display: block;
           width: 450px;
           height: 400px;
+          /* filter: grayscale(1); */
         }
 
         .masked-image {
           width: 100%;
           height: 100%;
           object-fit: cover;
+
+          transition: filter 0.3s ease;
+          filter: grayscale(1);
 
           clip-path: polygon(
             24% 4%,
@@ -122,6 +126,10 @@
         }
       }
     }
+  }
+
+  .person-card-wrapper:hover .mugshot .masked-image {
+    filter: grayscale(0);
   }
 
   .person-card-wrapper:nth-child(4n + 2),
