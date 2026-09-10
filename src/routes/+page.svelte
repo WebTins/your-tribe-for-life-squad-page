@@ -128,10 +128,6 @@
     }
   }
 
-  .person-card-wrapper:hover .mugshot .masked-image {
-    filter: grayscale(0);
-  }
-
   .person-card-wrapper:nth-child(4n + 2),
   .person-card-wrapper:nth-child(4n + 4) {
     transform: translateY(200px);
@@ -142,5 +138,10 @@
     clip-path: polygon(76% 4%, 29% 14%, 22% 47%, 28% 84%, 76% 89%, 83% 64%);
 
     transform: scaleX(-1);
+  }
+
+  .person-card-wrapper:hover .mugshot .masked-image,
+  .person-card-wrapper:focus .mugshot .masked-image {
+    filter: grayscale(0);
   }
 </style>
