@@ -1,7 +1,7 @@
 <script>
     import { page } from '$app/state'
-    import BackButton from '$lib/components/BackButton.svelte';
-    import Poppins from '$lib/assets/Poppins-Regular.ttf';
+    import BackButton from '$lib/components/BackButton.svelte'
+    import Poppins from '$lib/assets/Poppins-Regular.ttf'
     let src = '/src/lib/assets/spilled-coffee.png'
     let alt = 'spilled coffee'
 </script>
