@@ -1,4 +1,5 @@
 <script>
+	import BackButton from '$lib/components/BackButton.svelte'
 	import CountdownClock from '$lib/components/CountdownClock.svelte'
 
 	let { data } = $props()
@@ -28,6 +29,10 @@
 			<p>{person.bio || 'Hier komt informatie over deze persoon.'}</p>
 		</div>
 	</section>
+
+	<div class="back-button-position">
+		<BackButton />
+	</div>
 </main>
 
 <style>
@@ -83,6 +88,13 @@
 					line-height: 1.6;
 				}
 			}
+		}
+
+		.back-button-position {
+			position: absolute;
+			left: calc(50% + 400px);
+			bottom: 200px;
+			transform: translateX(-50%);
 		}
 	}
 </style>
