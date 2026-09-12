@@ -8,6 +8,19 @@
 </a>
 
 <style>
+    @keyframes shine {
+        0% {
+            -webkit-mask-position: 0;
+            mask-position: 0;
+            rotate: 0;
+        }
+
+        100% {
+            -webkit-mask-position: 120%;
+            mask-position: 120%;
+        }
+    }
+
     .back-button {
         display: flex;
         text-decoration: none;
@@ -53,6 +66,11 @@
             transition: mask-position 1.5s ease ease-in-out,-webkit-mask-position 1.5s ease-in-out;
             -webkit-mask-position: 120%;
             mask-position: 120%;
+            opacity: 1;
+        }
+
+        &:focus-visible {
+            animation: shine 1s ease-in-out infinite;
             opacity: 1;
         }
     }

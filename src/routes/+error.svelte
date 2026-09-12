@@ -6,6 +6,10 @@
     let alt = 'spilled coffee'
 </script>
 
+<svelte:head>
+    <title>ERROR: Page not found</title>
+</svelte:head>
+
 <main>
     <section class="top-content">
         <h1 class="error">{page.status}</h1>
@@ -17,16 +21,40 @@
         <p>We couldn't find the page you were looking for... maybe it's time for a coffee break?</p>
     </section>
 
-    <BackButton /> 
+    <div class="back-button-container">
+        <BackButton />         
+    </div>        
 </main>
 
 <style>
-
     :global(*) {
         box-sizing: border-box;
         margin: 0;
-        --shade-accent: #8c8c8c;
+        --shade-accent: #4f4f4fc8;
     }
+
+    .back-button-container {
+        transition: .4s ease-in-out,
+        left .4s ease-in-out;
+    }
+
+    @media (min-width: 768px) {
+        .back-button-container {
+            position: absolute;
+            bottom: 1em;
+            left: 2em;
+        }
+
+        .bottom-content {
+            position: absolute;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .back-button-container {
+            left: 15%;
+        }
+    }    
 
     @font-face {
         font-family: 'Poppins';
@@ -48,7 +76,7 @@
         }
     }
 
-    @keyframes --hover-shine {
+    @keyframes --rotate-animation {
         0% {
                 rotate: -5deg;
                 
@@ -101,11 +129,15 @@
             width: 400px;
             height: 200px;
 
+            @media (min-width: 768px) {
+                bottom: 7em;
+            }
+
             h1 {
                 position: absolute;
                 z-index: 1;
                 font-size: 10em;
-                animation-name: --hover-shine;
+                animation-name: --rotate-animation;
                 animation-duration: 3s;
                 animation-iteration-count: infinite;
             }
@@ -132,7 +164,16 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 1rem;
+            gap: 1em;
+            transition: .4s ease-in-out;
+
+            @media (min-width: 768px) {
+                bottom: 2em;
+            }
+
+            @media (min-width: 1024px) {
+                padding-right: 8rem;
+            }
 
             h2 {
                 font-size: 1.25em;
@@ -141,10 +182,14 @@
 
             p {
                 color: var(--shade-accent);
-                padding: 1rem;
                 width: 35ch;
                 font-size: 1em;
                 font-weight: 600;
+
+                @media (min-width: 768px) {
+                    width: 40ch;
+                    padding-bottom: 3rem;
+                }
             }
         }
     }   
