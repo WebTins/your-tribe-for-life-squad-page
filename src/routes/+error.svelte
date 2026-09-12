@@ -22,21 +22,15 @@
 
 <style>
 
-    * {
+    :global(*) {
         box-sizing: border-box;
         margin: 0;
-
         --shade-accent: #8c8c8c;
     }
 
     @font-face {
-        font-family: Poppins;
-        src: url(/src/lib/assets/Poppins-Regular.ttf)
-    }
-
-        @font-face {
-        font-family: Write;
-        src: url('${Poppins}') format('truetype');
+        font-family: 'Poppins';
+        src: url('$lib/assets/Poppins-Regular.ttf') format('truetype');
     }
 
     @keyframes --coffee-spill {
@@ -78,21 +72,19 @@
             opacity: 1;
         }
     }
-
+    
     main {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
-        height: 100%;
+        height: 100vh;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
         text-align: center;
         font-family: Poppins;
+        overflow: hidden;
 
         @supports (animation-timeline: view()) {
             animation: fade-in .3s ease-in-out;
@@ -104,6 +96,7 @@
             justify-content: center;
             flex-direction: row;
             align-items: center;
+            margin-top: 5em;
 
             width: 400px;
             height: 200px;
@@ -133,7 +126,7 @@
         }
 
         .bottom-content {
-            position: absolute;
+            display: flex;
             bottom: 1em;
             right: 1.5em;
             display: flex;
@@ -141,10 +134,16 @@
             justify-content: flex-end;
             padding: 1rem;
 
+            h2 {
+                font-size: 1.25em;
+                margin-top: 5em;
+            }
+
             p {
                 color: var(--shade-accent);
                 padding: 1rem;
-                width: 60ch;
+                width: 35ch;
+                font-size: 1em;
                 font-weight: 600;
             }
         }

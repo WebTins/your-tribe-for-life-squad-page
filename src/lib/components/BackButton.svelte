@@ -9,10 +9,6 @@
 
 <style>
     .back-button {
-        position: relative;
-        right: 25em;
-        top: 10em;
-
         display: flex;
         text-decoration: none;
         justify-content: flex-start;
@@ -22,7 +18,7 @@
         font-weight: 600;
         color: white;
 
-        width: 200px;
+        width: 220px;
         height: 150px;
 
         cursor: pointer;
