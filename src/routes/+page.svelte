@@ -79,10 +79,10 @@
 
   .squadpage {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     padding-left: 15px;
     padding-right: 15px;
-    /* overflow: hidden; */
+    overflow: hidden;
 
     .person-card-wrapper {
       text-decoration: none;
@@ -104,7 +104,6 @@
           display: block;
           width: 450px;
           height: 400px;
-          /* filter: grayscale(1); */
         }
 
         .masked-image {
@@ -126,22 +125,39 @@
         }
       }
     }
+
+    .person-card-wrapper:nth-child(4n + 2) .masked-image,
+    .person-card-wrapper:nth-child(4n + 4) .masked-image {
+      clip-path: polygon(76% 4%, 29% 14%, 22% 47%, 28% 84%, 76% 89%, 83% 64%);
+
+      transform: scaleX(-1);
+    }
+
+    .person-card-wrapper:hover .mugshot .masked-image,
+    .person-card-wrapper:focus .mugshot .masked-image {
+      filter: grayscale(0);
+    }
   }
 
-  .person-card-wrapper:nth-child(4n + 2),
-  .person-card-wrapper:nth-child(4n + 4) {
-    transform: translateY(200px);
+  @media (min-width: 576px) {
+    .squadpage {
+      grid-template-columns: 50% 50%;
+    }
+
+    .person-card-wrapper:nth-child(4n + 2),
+    .person-card-wrapper:nth-child(4n + 4) {
+      transform: translateY(200px);
+    }
   }
 
-  .person-card-wrapper:nth-child(4n + 2) .masked-image,
-  .person-card-wrapper:nth-child(4n + 4) .masked-image {
-    clip-path: polygon(76% 4%, 29% 14%, 22% 47%, 28% 84%, 76% 89%, 83% 64%);
+  @media (min-width: 1200px) {
+    .squadpage {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
 
-    transform: scaleX(-1);
-  }
-
-  .person-card-wrapper:hover .mugshot .masked-image,
-  .person-card-wrapper:focus .mugshot .masked-image {
-    filter: grayscale(0);
+    .person-card-wrapper:nth-child(4n + 2),
+    .person-card-wrapper:nth-child(4n + 4) {
+      transform: translateY(200px);
+    }
   }
 </style>
