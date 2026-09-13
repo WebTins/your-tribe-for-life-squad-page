@@ -17,11 +17,13 @@
 			<h1>{person.name}</h1>
 
 			{#if person.avatar}
-				<img
-					class="person-image"
-					src={person.avatar}
-					alt={person.name}
-				/>
+				<picture>
+					<img
+						class="person-image"
+						src={person.avatar}
+						alt={person.name}
+					/>
+				</picture>
 			{/if}
 		</div>
 
@@ -30,18 +32,12 @@
 		</div>
 	</section>
 
-	<div class="back-button-position">
+	<div class="button-wrapper">
 		<BackButton />
 	</div>
 </main>
 
 <style>
-	:global(:root) {
-		--countdown-background: #000000;
-		--countdown-text: #ffffff;
-		--countdown-width: 400px;
-	}
-
 	.detail-page {
 		position: relative;
 		min-height: 100vh;
@@ -90,7 +86,7 @@
 			}
 		}
 
-		.back-button-position {
+		.button-wrapper {
 			position: absolute;
 			left: calc(50% + 400px);
 			bottom: 200px;
