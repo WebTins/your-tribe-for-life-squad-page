@@ -38,7 +38,7 @@
 </script>
 
 <header class="countdown-wrapper">
-	<section class="countdown-clock">
+	<div class="countdown-clock">
 		<a href="/" class="squad-info">
 			<img src={logo} alt="2G Squadpage logo">
 		</a>
@@ -53,7 +53,7 @@
 
 			<p>left for coffeetime</p>
 		</div>
-	</section>
+	</div>
 </header>
 
 <style>
