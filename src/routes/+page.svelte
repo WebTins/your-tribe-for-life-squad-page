@@ -9,7 +9,7 @@
 
 <section class="squadpage">
   {#each persons as person}
-    <a class="person-card-wrapper" href="/person/{person.id}">
+    <a class="person-card-wrapper" href={`/${person.id}`}>
       <article class="person-card">
         <div class="person-information">
           <h2>{person.name}</h2>
