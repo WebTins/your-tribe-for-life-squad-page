@@ -1,7 +1,44 @@
 <script>
-  let { data } = $props();
+	import { onMount } from 'svelte'
 
-  const persons = data.persons;
+	let { data } = $props()
+
+	const persons = data.persons
+
+	// I use $state because these values change every second
+	let hours = $state(0)
+	let minutes = $state(0)
+	let seconds = $state(0)
+
+	function updateCountdown() {
+		const now = new Date()
+		const coffeeTime = new Date()
+
+		coffeeTime.setHours(15, 15, 0, 0)
+
+		// If coffee time has passed, use tomorrow
+		if (now >= coffeeTime) {
+			coffeeTime.setDate(coffeeTime.getDate() + 1)
+		}
+
+		const difference = coffeeTime - now
+
+		// Change the time left into hours, minutes and seconds
+		hours = Math.floor(difference / 1000 / 60 / 60)
+		minutes = Math.floor((difference / 1000 / 60) % 60)
+		seconds = Math.floor((difference / 1000) % 60)
+	}
+
+	onMount(() => {
+		updateCountdown()
+
+		// Update the countdown every second
+		const timer = setInterval(updateCountdown, 1000)
+
+		return () => {
+			clearInterval(timer)
+		}
+	})
 </script>
 
 <section class="squadpage">
