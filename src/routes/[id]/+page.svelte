@@ -12,6 +12,9 @@
 			: person.mugshot
 </script>
 
+<svelte:head>
+    <title>Detailpage</title>
+</svelte:head>
 <main class="detail-page">
 	<div class="clock-position">
 		<CountdownClock />
