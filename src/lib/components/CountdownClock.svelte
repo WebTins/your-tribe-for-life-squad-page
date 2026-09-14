@@ -57,6 +57,11 @@
 </header>
 
 <style>
+	:global(:root) {
+		--countdown-background: #000000;
+		--countdown-text: #ffffff;
+		--countdown-width: 400px;
+	}
 	.countdown-wrapper {
 		position: sticky;
 		top: 20px;
