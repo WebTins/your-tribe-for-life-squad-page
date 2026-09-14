@@ -1,5 +1,6 @@
 <script>
 	import CountdownClock from '$lib/components/CountdownClock.svelte'
+	import { onMount } from 'svelte'
 
 	let { data } = $props()
 
