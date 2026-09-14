@@ -1,7 +1,9 @@
 <script>
-  let { data } = $props();
+	import CountdownClock from '$lib/components/CountdownClock.svelte'
 
-  const persons = data.persons;
+	let { data } = $props()
+
+	const persons = data.persons
 </script>
 
 <section class="squadpage">
