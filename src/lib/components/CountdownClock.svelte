@@ -12,7 +12,7 @@
 
 		coffeeTime.setHours(15, 15, 0, 0)
 
-		// If coffee time has passed, use tomorrow
+		// Use tomorrow when coffee time has passed
 		if (now >= coffeeTime) {
 			coffeeTime.setDate(coffeeTime.getDate() + 1)
 		}
@@ -37,15 +37,15 @@
 	})
 </script>
 
-<header class="countdown-wrapper">
-	<div class="countdown-clock">
+<div class="countdown-wrapper">
+	<header class="countdown-clock">
 		<a href="/" class="squad-info">
-			<img src={logo} alt="2G Squadpage logo">
+			<img src={logo} alt="2G Squadpage logo" />
+			<p>Squadpage</p>
 		</a>
 
 		<div class="coffee-time">
 			<time>
-				<!-- Add a zero when the number has one digit -->
 				{String(hours).padStart(2, '0')}:
 				{String(minutes).padStart(2, '0')}:
 				{String(seconds).padStart(2, '0')}
@@ -53,68 +53,93 @@
 
 			<p>left for coffeetime</p>
 		</div>
-	</div>
-</header>
+	</header>
+</div>
 
 <style>
-	:global(:root) {
+	.countdown-wrapper {
 		--countdown-background: #000000;
 		--countdown-text: #ffffff;
-		--countdown-width: 400px;
-	}
-	.countdown-wrapper {
+		--countdown-width: 31rem;
+
 		position: sticky;
-		top: 20px;
+		top: 1.25rem;
 		z-index: 10;
 
 		display: flex;
 		justify-content: center;
+
 		width: 100%;
-	}
 
-	.countdown-clock {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		width: var(--countdown-width);
-		padding: 20px 30px;
-		color: var(--countdown-text);
-		background-color: var(--countdown-background);
-
-		/* Create the angled shape from my Figma design */
-		clip-path: polygon(
-			3% 0,
-			100% 5%,
-			97% 100%,
-			0 92%
-		);
-
-		.squad-info {
+		.countdown-clock {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: space-between;
 
-			img {
-				display: block;
-				width: 70px;
-				height: auto;
+			width: 100%;
+			max-width: var(--countdown-width);
+			min-height: 8rem;
+			padding: 1.5rem 3rem;
+			box-sizing: border-box;
+
+			color: var(--countdown-text);
+			background-color: var(--countdown-background);
+
+			/* Shape based on the Figma design */
+			clip-path: polygon(
+				2% 0,
+				22% 7%,
+				52% 2%,
+				76% 8%,
+				98% 0,
+				97% 90%,
+				75% 84%,
+				52% 94%,
+				25% 88%,
+				0 100%
+			);
+
+			.squad-info {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				color: var(--countdown-text);
+				text-decoration: none;
+
+				img {
+					display: block;
+					width: 4.5rem;
+					height: auto;
+				}
+
+				p {
+					margin: -0.5rem 0 0;
+
+					font-family: "Poppins";
+					font-size: 1rem;
+				}
 			}
-		}
 
-		.coffee-time {
-			text-align: center;
+			.coffee-time {
+				text-align: center;
 
-			time {
-				display: block;
-				font-size: 32px;
-				font-weight: bold;
-			}
+				time {
+					display: block;
 
-			p {
-				margin: 0;
-				font-size: 16px;
-				line-height: 1.5;
+					font-family: "Just Me Again Down Here";
+					font-size: 2.5rem;
+					font-weight: 400;
+					line-height: 1;
+				}
+
+				p {
+					margin: 0.25rem 0 0;
+
+					font-family: "Poppins";
+					font-size: 1rem;
+					line-height: 1.5;
+				}
 			}
 		}
 	}
