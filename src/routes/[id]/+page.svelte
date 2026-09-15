@@ -4,43 +4,50 @@
 
 	let { data } = $props()
 
-	// Get the image ID when Directus returns either an object or a string
 	const person = data.person
+
 	const mugshotId =
 		typeof person.mugshot === 'object'
-			? person.mugshot.id
+			? person.mugshot?.id
 			: person.mugshot
 </script>
 
-<svelte:head>
-    <title>Detailpage</title>
-</svelte:head>
 <main class="detail-page">
-	<div class="clock-position">
+	<div class="countdown-position">
 		<CountdownClock />
 	</div>
 
 	<section class="person-detail">
-		<div class="person-information">
+		<div class="person">
 			<h1>{person.name}</h1>
 
 			{#if mugshotId}
 				<picture class="person-picture">
+					<source
+						type="image/avif"
+						srcset={`https://fdnd.directus.app/assets/${mugshotId}?fit=cover&format=avif&height=700&quality=80`}
+					/>
+
+					<source
+						type="image/webp"
+						srcset={`https://fdnd.directus.app/assets/${mugshotId}?fit=cover&format=webp&height=700&quality=80`}
+					/>
+
 					<img
 						class="person-image"
-						src={`https://fdnd.directus.app/assets/${mugshotId}`}
-						width="250"
-						height="320"
+						src={`https://fdnd.directus.app/assets/${mugshotId}?height=700&quality=80`}
 						alt={`Afbeelding van ${person.name}`}
 					/>
 				</picture>
 			{:else}
-				<p>Geen afbeelding beschikbaar.</p>
+				<p>Person is getting a coffee...</p>
 			{/if}
 		</div>
 
 		<div class="person-description">
-			<p>{person.bio || 'Hier komt informatie over deze persoon.'}</p>
+			<p>
+				{person.bio || 'This CoffeeTime member is still writing their bio.'}
+			</p>
 		</div>
 	</section>
 
@@ -50,121 +57,112 @@
 </main>
 
 <style>
-	:global(:root) {
-		--detail-content-width: 950px;
-		--person-image-width: 250px;
-		--person-image-height: 320px;
-		--detail-page-spacing: 2rem;
-		--detail-section-gap: 80px;
-	}
-
 	.detail-page {
-		position: relative;
+		--person-image-width: 20rem;
+		--person-image-height: 25rem;
+		--content-width: 70rem;
+
 		min-height: 100vh;
-		padding: var(--detail-page-spacing);
+		padding: 2rem;
 		box-sizing: border-box;
 
-		.clock-position {
-			position: absolute;
-			top: 35px;
-			right: 50px;
+		.countdown-position {
+			display: flex;
+			justify-content: center;
+
+			width: 100%;
+			margin-bottom: 3rem;
 		}
 
 		.person-detail {
 			display: grid;
-			grid-template-columns: 300px 1fr;
-			align-items: center;
-			gap: var(--detail-section-gap);
-			width: 100%;
-			max-width: var(--detail-content-width);
-			margin: 0 auto;
-			padding-top: 150px;
+			grid-template-columns: 1fr;
+			gap: 3rem;
 
-			.person-information {
+			width: 100%;
+			max-width: var(--content-width);
+			margin: 0 auto;
+
+			.person {
 				h1 {
-					margin: 0 0 20px;
-					font-size: 1.8rem;
-					font-weight: 500;
+					margin: 0 0 1.5rem;
+
+					font-family: "Just Me Again Down Here";
+					font-size: 3rem;
+					font-weight: 400;
+					line-height: 1;
+					text-transform: uppercase;
 				}
 
 				.person-picture {
 					display: block;
-					width: var(--person-image-width);
+
+					width: 100%;
+					max-width: var(--person-image-width);
 					height: var(--person-image-height);
 
 					.person-image {
 						display: block;
+
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
+
 						filter: grayscale(1);
 						transition: filter 0.3s ease;
 
 						clip-path: polygon(
-							24% 4%,
-							71% 14%,
-							78% 47%,
-							72% 84%,
-							24% 89%,
-							17% 64%
+							12% 0,
+							88% 6%,
+							100% 38%,
+							93% 92%,
+							10% 100%,
+							0 55%
 						);
 					}
 
-					.person-image:hover {
+					&:hover .person-image {
 						filter: grayscale(0);
 					}
 				}
 			}
 
 			.person-description {
-				max-width: 400px;
+				max-width: 35rem;
 
 				p {
 					margin: 0;
+
+					font-family: "Poppins";
 					font-size: 1rem;
-					line-height: 1.6;
+					line-height: 1.8;
 				}
 			}
 		}
 
 		.button-wrapper {
-			position: absolute;
-			left: calc(50% + 400px);
-			bottom: 200px;
-			transform: translateX(-50%);
+			display: flex;
+			justify-content: center;
+
+			width: 100%;
+			margin-top: 4rem;
 		}
 	}
 
-	@media (max-width: 700px) {
+	@media (min-width: 48rem) {
 		.detail-page {
-			padding: 1rem;
-
-			.clock-position {
-				position: static;
-				display: flex;
-				justify-content: center;
+			.countdown-position {
+				justify-content: flex-end;
 			}
 
 			.person-detail {
-				grid-template-columns: 1fr;
-				gap: 40px;
-				padding-top: 60px;
-
-				.person-information {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				}
+				grid-template-columns: 1fr 1.4fr;
+				align-items: center;
+				gap: 5rem;
 
 				.person-description {
-					margin: 0 auto;
+					padding-top: 4rem;
 				}
-			}
-
-			.button-wrapper {
-				position: static;
-				margin-top: 50px;
-				transform: none;
 			}
 		}
 	}
