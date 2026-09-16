@@ -68,7 +68,7 @@
 
 		.countdown-position {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-end;
 
 			width: 100%;
 			margin-bottom: 3rem;
@@ -134,7 +134,7 @@
 					margin: 0;
 
 					font-family: "Poppins";
-					font-size: 1rem;
+					font-size: 1.25rem;
 					line-height: 1.8;
 				}
 			}
@@ -149,14 +149,10 @@
 		}
 	}
 
-	@media (min-width: 48rem) {
+	@media (min-width: 768px) {
 		.detail-page {
-			.countdown-position {
-				justify-content: flex-end;
-			}
-
 			.person-detail {
-				grid-template-columns: 1fr 1.4fr;
+				grid-template-columns: 40% 60%;
 				align-items: center;
 				gap: 5rem;
 
