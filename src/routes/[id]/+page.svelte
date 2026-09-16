@@ -151,14 +151,15 @@
 
 	@media (min-width: 768px) {
 		.detail-page {
+			.countdown-position {
+				margin-left: auto;
+				width: 31rem;
+			}
+
 			.person-detail {
 				grid-template-columns: 40% 60%;
 				align-items: center;
 				gap: 5rem;
-
-				.person-description {
-					padding-top: 4rem;
-				}
 			}
 		}
 	}
