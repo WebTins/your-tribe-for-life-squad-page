@@ -20,7 +20,8 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+	<title>2G Squadpage</title>
+	<link rel="icon" href={favicon} />
 </svelte:head>
 
 {@render children()}
