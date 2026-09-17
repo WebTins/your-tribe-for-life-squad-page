@@ -60,6 +60,7 @@
             display: flex;
             gap: 1em;
             transform: translateY(-.5em);
+            text-wrap: nowrap;
         }
 
         &:hover {
