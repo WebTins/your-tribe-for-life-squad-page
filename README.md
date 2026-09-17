@@ -55,9 +55,16 @@ After looking for inspiration we've voted for the best design and eventually we 
 
 ---
 
-**Design in Figma**
+**Design in Figma Overview page**
 
 <img width="670" height="332" alt="image" src="https://github.com/user-attachments/assets/7f985a52-eb4f-4988-bd3c-314985c16685" />
+
+---
+
+**Design in Figma Detail page**
+
+<img width="730" height="267" alt="image" src="https://github.com/user-attachments/assets/60ebf258-9160-405b-badd-4e0a47d2fb5d" />
+
 
 
 # sv
