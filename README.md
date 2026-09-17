@@ -66,6 +66,25 @@ After looking for inspiration we've voted for the best design and eventually we 
 <img width="730" height="267" alt="image" src="https://github.com/user-attachments/assets/60ebf258-9160-405b-badd-4e0a47d2fb5d" />
 
 
+## Usage of the Website
+
+### Overview Page
+
+On the overview page, visitors can view all students and teachers in the squad. The page shows the profile of each person in a clear overview. Visitors can click on a person to view more information.
+
+<img width="1901" height="866" alt="Overview page showing all students and teachers" src="https://github.com/user-attachments/assets/a6e15656-0b57-46f8-9055-760d0af2beba" />
+
+### Detail Page
+
+After selecting a person, the visitor is taken to their detail page. This page shows more information about the selected person, such as their name, profile picture, hobbies and other personal details.
+
+<img width="1915" height="852" alt="Detail page showing information about the selected person" src="https://github.com/user-attachments/assets/21f5e756-c73a-4cda-9e68-43814d56ea38" />
+
+### Error Page
+
+If a visitor opens a page that does not exist or uses an incorrect URL, a custom error page is shown. The error page explains that the requested page could not be found and gives the visitor an option to return to the homepage.
+
+<img width="1916" height="861" alt="Custom error page" src="https://github.com/user-attachments/assets/ea0ae60d-39d0-4fa2-a493-55ba9cbca74f" />
 
 # sv
 
