@@ -7,7 +7,7 @@
 	const persons = data.persons
 </script>
 
-<CountdownClock />
+<CountdownClock isOverview={true} />
 
 <section class="squadpage">
 	{#each persons as person}
