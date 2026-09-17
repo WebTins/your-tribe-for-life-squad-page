@@ -1,5 +1,7 @@
 # Squadpage CoffeeTime
 
+[Live Website](https://coffee-time-s13.netlify.app/)
+
 In this project we had to create a squadpage of the 2nd year students and teachers of our squad in SvelteKit. This is our first project working with a framework where we have learned a lot of new things with SvelteKit where we use HTML, CSS and JS. 
 
 The point of this project is to see an overview of all the students and teachers where you are able to see the details of a person on another page.
@@ -25,6 +27,37 @@ In this project we design and build an overview of our tribe on the basis of hea
 
 During this project we have setup arrangements with the team and also code conventions that we have to follow. To read our arrangements and code conventions please read our [Contributing file](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/CONTRIBUTING.md).
 
+## Design
+
+[Figma designs](https://www.figma.com/design/zsrLhtyXdZ4oehOyeBvTDR/CoffeeTime?node-id=21-2&t=NQxHHL6orzvz0Y06-1)
+
+To start with this project we had to analyse and do our research with the design by looking at other designs on Pinterest as an inspiration to pick an official design. All 3 of us have picked a few design and compared it with each other. To pick an offical design we've voted for the best inspiration out of all the designs we've seen from Pinterest.
+
+Tin's picks: 
+
+<img width="440" height="316" alt="image" src="https://github.com/user-attachments/assets/d17e7a58-615a-4a80-aad1-4b0665fd9de0" />
+
+Isaac's picks:
+
+<img width="671" height="356" alt="image" src="https://github.com/user-attachments/assets/8e66ac84-e4cd-478c-8d14-bebe7b71baaf" />
+
+Jasin's picks:
+
+<img width="687" height="195" alt="image" src="https://github.com/user-attachments/assets/34ef700d-fde9-460d-9ce1-70926f633b96" />
+
+After looking for inspiration we've voted for the best design and eventually we picked Isaac's picks.
+
+---
+
+**Final Design**
+
+<img width="686" height="362" alt="image" src="https://github.com/user-attachments/assets/657ba561-bf0f-4093-a47d-4c69b7328f83" />
+
+---
+
+**Design in Figma**
+
+<img width="670" height="332" alt="image" src="https://github.com/user-attachments/assets/7f985a52-eb4f-4988-bd3c-314985c16685" />
 
 
 # sv
