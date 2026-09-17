@@ -15,12 +15,12 @@
 
 <main class="detail-page">
 	<div class="countdown-position">
-		<CountdownClock />
+		<CountdownClock transitionName="countdown-clock"/>
 	</div>
 
 	<section class="person-detail">
 		<div class="person">
-			<h1>{person.name}</h1>
+			<h1 style="view-transition-name: name-{person.id};">{person.name}</h1>
 
 			{#if mugshotId}
 				<picture class="person-picture">
@@ -38,6 +38,7 @@
 						class="person-image"
 						src={`https://fdnd.directus.app/assets/${mugshotId}?height=700&quality=80`}
 						alt={`Afbeelding van ${person.name}`}
+						style="view-transition-name: transfer-{person.id};"
 					/>
 				</picture>
 			{:else}
@@ -58,6 +59,11 @@
 </main>
 
 <style>
+	@media (prefers-reduced-motion: no-preference) {
+		:root {
+			view-transition-name:none;
+		}
+	}
 	.detail-page {
 		--person-image-width: 20rem;
 		--person-image-height: 25rem;
