@@ -80,11 +80,6 @@
             line-height: 1;
             text-transform: uppercase;
           }
-
-          p {
-            font-family: "Poppins";
-            font-size: 1rem;
-          }
         }
 
         .mugshot,

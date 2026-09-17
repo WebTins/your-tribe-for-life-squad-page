@@ -9,7 +9,13 @@
 }
 
 :root {
+  /* Colors */
   --shade-accent: #4f4f4fc8;
+
+  /* Sizing */
+  --person-image-width: 20rem;
+  --person-image-height: 25rem;
+  --content-width: 70rem;
 }
 
 * {
@@ -20,4 +26,9 @@
 
 body {
   line-height: 1.5;
+}
+
+p {
+  font-family: "Poppins";
+  font-size: 1.25rem;
 }

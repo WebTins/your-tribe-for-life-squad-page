@@ -163,15 +163,13 @@
       }
 
       h2 {
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin-top: 5em;
       }
 
       p {
         color: var(--shade-accent);
         width: 35ch;
-        font-size: 1em;
-        font-weight: 600;
 
         @media (min-width: 768px) {
           width: 40ch;
