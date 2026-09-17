@@ -8,6 +8,7 @@
 </script>
 
 <CountdownClock transitionName="countdown-clock"/>
+<CountdownClock isOverview={true} />
 
 <section class="squadpage">
 	{#each persons as person}
