@@ -1,5 +1,6 @@
 <script>
 	import CountdownClock from '$lib/components/CountdownClock.svelte'
+	import { slugify } from '$lib/utils.js'
 
 	let { data } = $props()
 
@@ -10,7 +11,7 @@
 
 <section class="squadpage">
 	{#each persons as person}
-		<a class="person-card-wrapper" href={`/${person.id}`}>
+		<a class="person-card-wrapper" href="/{slugify(person.name)}">
 			<article class="person-card">
 				<div class="person-information">
 					<h2>{person.name}</h2>

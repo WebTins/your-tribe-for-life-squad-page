@@ -5,6 +5,7 @@
 	let { data } = $props()
 
 	const person = data.person
+	const personSlug = data.slug
 
 	const mugshotId =
 		typeof person.mugshot === 'object'
