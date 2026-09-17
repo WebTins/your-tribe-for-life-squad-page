@@ -101,7 +101,43 @@ If a visitor opens a page that does not exist or uses an incorrect URL, a custom
 
 <img width="1916" height="861" alt="Custom error page" src="https://github.com/user-attachments/assets/ea0ae60d-39d0-4fa2-a493-55ba9cbca74f" />
 
-# sv
+---
+
+## Features
+
+This project is built with SvelteKit, HTML, CSS and Javascript
+
+### view-transitions
+
+On the website I added view transitions to the Name, image and the countdown clock because those 3 things are on the overview page and detail page. So whenever a user lands on the detail page (or back home). The 3 elements will transition to the other page which can give the user a pleasurable feeling.
+
+```html
+<CountdownClock isOverview={true} transitionName="countdown-clock" />
+
+<div class="person-information">
+  <h2 style="view-transition-name: name-{person.id};">{person.name}</h2>
+  <p>{person.residency}</p>
+</div>
+
+ <img
+    class="masked-image"
+    src="https://fdnd.directus.app/assets/{person.mugshot_year2}?height=700&quality=80"
+    width={person.mugshot_year2.width}
+    height={person.mugshot_year2.height}
+    alt="Afbeelding van {person.name}"
+    style="view-transition-name: transfer-{person.id};"
+  />
+```
+
+```html
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+      view-transition-name: none;
+    }
+  }
+</style>
+```
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
