@@ -17,8 +17,15 @@ The point of this project is to see an overview of all the students and teachers
 3. [Mockups]()
 4. [Usage of the website]()
 5. [Features]()
-6. [Code conventions]()
-7. [Installation]()
+6. [Installation]()
+
+## Description
+
+In this project we design and build an overview of our tribe on the basis of headless CMS and framework. The framework that is used in this project is [SvelteKit](https://svelte.dev/docs/kit/introduction) where we use [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript) to build the project. The data we use comes from [Directus](https://directus.com/). 
+
+During this project we have setup arrangements with the team and also code conventions that we have to follow. To read our arrangements and code conventions please read our [Contributing file](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/CONTRIBUTING.md).
+
+
 
 # sv
 
