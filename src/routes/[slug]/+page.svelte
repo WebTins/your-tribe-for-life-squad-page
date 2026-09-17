@@ -15,7 +15,7 @@
 
 <main class="detail-page">
 	<div class="countdown-position">
-		<CountdownClock transitionName="countdown-clock"/>
+		<CountdownClock isOverview={true} transitionName="countdown-clock" />
 	</div>
 
 	<section class="person-detail">

@@ -2,12 +2,10 @@
 	import { onMount } from 'svelte'
 	import logo from '$lib/assets/2G.png'
 
-	let { isOverview = false } = $props()
-
 	let hours = $state(0)
 	let minutes = $state(0)
 	let seconds = $state(0)
-	let { transitionName = 'countdown-clock' } = $props()
+	let { isOverview = false, transitionName = 'countdown-clock' } = $props()
 
 	function updateCountdown() {
 		const now = new Date()
