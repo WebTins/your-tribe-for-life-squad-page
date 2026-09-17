@@ -7,14 +7,14 @@
 	const persons = data.persons
 </script>
 
-<CountdownClock />
+<CountdownClock transitionName="countdown-clock"/>
 
 <section class="squadpage">
 	{#each persons as person}
 		<a class="person-card-wrapper" href="/{slugify(person.name)}">
 			<article class="person-card">
 				<div class="person-information">
-					<h2>{person.name}</h2>
+					<h2 style="view-transition-name: name-{person.id};">{person.name}</h2>
 					<p>{person.residency}</p>
 				</div>
 
@@ -36,6 +36,7 @@
 							width={person.mugshot.width}
 							height={person.mugshot.height}
 							alt="Afbeelding van {person.name}"
+              style="view-transition-name: transfer-{person.id};"
 						/>
 					</picture>
 				{:else}
@@ -43,6 +44,7 @@
 						class="masked-image placeholder"
 						src="src/lib/assets/person-placeholder.png"
 						alt="Geen afbeelding beschikbaar"
+            style="view-transition-name: transfer-{person.id};"
 					/>
 					<!-- <p>Person is getting a coffee...</p> -->
 				{/if}
@@ -61,6 +63,12 @@
 		font-family: "Poppins";
 		src: url("src/lib/fonts/Poppins-Medium.ttf") format("truetype");
 	}
+
+  @media (prefers-reduced-motion: no-preference) {
+    :root {
+        view-transition-name:none;
+    }
+  } 
 
 	* {
 		box-sizing: border-box;
