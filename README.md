@@ -76,6 +76,10 @@ After looking for inspiration we've voted for the best design and eventually we 
 
 <img width="854" height="384" alt="mockup-all-framed (1)" src="https://github.com/user-attachments/assets/0a43595c-e36f-4641-b42c-b71fca83120f" />
 
+### Error Page
+
+<img width="850" height="275" alt="image" src="https://github.com/user-attachments/assets/164fa43f-691a-4a07-82f2-6cddee67fa46" />
+
 
 ## Usage of the Website
 
