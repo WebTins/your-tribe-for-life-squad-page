@@ -31,12 +31,6 @@
 </main>
 
 <style>
-  :global(*) {
-    box-sizing: border-box;
-    margin: 0;
-    --shade-accent: #4f4f4fc8;
-  }
-
   .back-button-container {
     transition:
       0.4s ease-in-out,
@@ -59,11 +53,6 @@
     .back-button-container {
       left: 15%;
     }
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("$lib/assets/Poppins-Regular.ttf") format("truetype");
   }
 
   @keyframes --coffee-spill {
@@ -175,15 +164,13 @@
       }
 
       h2 {
-        font-size: 1.25em;
+        font-size: 1.5em;
         margin-top: 5em;
       }
 
       p {
         color: var(--shade-accent);
         width: 35ch;
-        font-size: 1em;
-        font-weight: 600;
 
         @media (min-width: 768px) {
           width: 40ch;

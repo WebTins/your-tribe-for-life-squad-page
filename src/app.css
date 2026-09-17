@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Just Me Again Down Here";
+  src: url("/fonts/JustMeAgainDownHere-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Medium.ttf") format("truetype");
+}
+
+:root {
+  /* Colors */
+  --shade-accent: #4f4f4fc8;
+
+  /* Sizing */
+  --person-image-width: 20rem;
+  --person-image-height: 25rem;
+  --content-width: 70rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+p {
+  font-family: "Poppins";
+  font-size: 1.25rem;
+}

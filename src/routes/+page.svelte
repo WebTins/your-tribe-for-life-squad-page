@@ -53,39 +53,6 @@
 </section>
 
 <style>
-  @font-face {
-    font-family: "Just Me Again Down Here";
-    src: url("src/lib/fonts/JustMeAgainDownHere-Regular.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "Poppins";
-    src: url("src/lib/fonts/Poppins-Medium.ttf") format("truetype");
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    line-height: 1.5;
-  }
-
-  h2 {
-    font-family: "Just Me Again Down Here";
-    font-weight: 400;
-    font-size: 3rem;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-
-  p {
-    font-family: "Poppins";
-    font-size: 1rem;
-  }
-
   .squadpage {
     display: grid;
     grid-template-columns: 1fr;
