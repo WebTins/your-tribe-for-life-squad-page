@@ -15,7 +15,7 @@
     <a class="person-card-wrapper" href="/{slugify(person.name)}">
       <article class="person-card">
         <div class="person-information">
-          <h2>{person.name}</h2>
+          <h2 style="view-transition-name: name-{person.id};">{person.name}</h2>
           <p>{person.residency}</p>
         </div>
 
@@ -37,6 +37,7 @@
               width={person.mugshot_year2.width}
               height={person.mugshot_year2.height}
               alt="Afbeelding van {person.name}"
+              style="view-transition-name: transfer-{person.id};"
             />
           </picture>
         {:else}
