@@ -23,19 +23,19 @@
           <picture class="mugshot">
             <source
               type="image/avif"
-              srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=avif&height=700&quality=80"
+              srcset="https://fdnd.directus.app/assets/{person.mugshot_year2}?fit=cover&format=avif&height=700&quality=80"
             />
 
             <source
               type="image/webp"
-              srcset="https://fdnd.directus.app/assets/{person.mugshot}?fit=cover&format=webp&height=700&quality=80"
+              srcset="https://fdnd.directus.app/assets/{person.mugshot_year2}?fit=cover&format=webp&height=700&quality=80"
             />
 
             <img
               class="masked-image"
-              src="https://fdnd.directus.app/assets/{person.mugshot}?height=700&quality=80"
-              width={person.mugshot.width}
-              height={person.mugshot.height}
+              src="https://fdnd.directus.app/assets/{person.mugshot_year2}?height=700&quality=80"
+              width={person.mugshot_year2.width}
+              height={person.mugshot_year2.height}
               alt="Afbeelding van {person.name}"
             />
           </picture>
