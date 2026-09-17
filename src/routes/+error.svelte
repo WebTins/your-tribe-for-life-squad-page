@@ -2,7 +2,8 @@
   import { page } from "$app/state";
   import BackButton from "$lib/components/BackButton.svelte";
   import Poppins from "$lib/assets/Poppins-Regular.ttf";
-  let src = "/src/lib/assets/spilled-coffee.png";
+  import spilledCoffee from "$lib/assets/spilled-coffee.png";
+
   let alt = "spilled coffee";
 </script>
 
@@ -13,7 +14,7 @@
 <main>
   <section class="top-content">
     <h1 class="error">{page.status}</h1>
-    <img {src} width="200" {alt} />
+    <img src={spilledCoffee} {alt} />
   </section>
 
   <section class="bottom-content">
