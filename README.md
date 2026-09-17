@@ -111,6 +111,8 @@ This project is built with SvelteKit, HTML, CSS and Javascript
 
 On the website I added view transitions to the Name, image and the countdown clock because those 3 things are on the overview page and detail page. So whenever a user lands on the detail page (or back home). The 3 elements will transition to the other page which can give the user a pleasurable feeling.
 
+https://github.com/user-attachments/assets/bd887149-82de-481a-9657-4080d2acfa2d
+
 ```html
 <CountdownClock isOverview={true} transitionName="countdown-clock" />
 
