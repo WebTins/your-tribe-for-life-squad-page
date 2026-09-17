@@ -15,12 +15,12 @@
 
 <main class="detail-page">
 	<div class="countdown-position">
-		<CountdownClock />
+		<CountdownClock isOverview={true} transitionName="countdown-clock" />
 	</div>
 
 	<section class="person-detail">
 		<div class="person">
-			<h1>{person.name}</h1>
+			<h1 style="view-transition-name: name-{person.id};">{person.name}</h1>
 
 			{#if mugshotId}
 				<picture class="person-picture">
@@ -38,6 +38,7 @@
 						class="person-image"
 						src={`https://fdnd.directus.app/assets/${mugshotId}?height=700&quality=80`}
 						alt={`Afbeelding van ${person.name}`}
+						style="view-transition-name: transfer-{person.id};"
 					/>
 				</picture>
 			{:else}
@@ -58,12 +59,21 @@
 </main>
 
 <style>
-	.detail-page {
-		--person-image-width: 20rem;
-		--person-image-height: 25rem;
-		--content-width: 70rem;
+	@media (prefers-reduced-motion: no-preference) {
+		:root {
+			view-transition-name: none;
+		}
+	}
 
-		min-height: 100vh;
+	.detail-page {
+		--person-image-width: 15rem;
+		--person-image-height: 19rem;
+		--content-width: 55rem;
+
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+
+		height: 100vh;
 		padding: 2rem;
 		box-sizing: border-box;
 
@@ -72,12 +82,13 @@
 			justify-content: flex-end;
 
 			width: 100%;
-			margin-bottom: 3rem;
+			margin-bottom: 0;
 		}
 
 		.person-detail {
 			display: grid;
 			grid-template-columns: 1fr;
+			align-self: center;
 			gap: 3rem;
 
 			width: 100%;
@@ -86,10 +97,10 @@
 
 			.person {
 				h1 {
-					margin: 0 0 1.5rem;
+					margin: 0 0 1rem;
 
 					font-family: "Just Me Again Down Here";
-					font-size: 3rem;
+					font-size: 2rem;
 					font-weight: 400;
 					line-height: 1;
 					text-transform: uppercase;
@@ -129,14 +140,14 @@
 			}
 
 			.person-description {
-				max-width: 35rem;
+				max-width: 32rem;
 
 				p {
 					margin: 0;
 
 					font-family: "Poppins";
-					font-size: 1.25rem;
-					line-height: 1.8;
+					font-size: 1rem;
+					line-height: 1.6;
 				}
 			}
 		}
@@ -146,7 +157,7 @@
 			justify-content: center;
 
 			width: 100%;
-			margin-top: 4rem;
+			margin-top: 1rem;
 		}
 	}
 
@@ -154,7 +165,7 @@
 		.detail-page {
 			.countdown-position {
 				margin-left: auto;
-				width: 31rem;
+				width: 24rem;
 			}
 
 			.person-detail {

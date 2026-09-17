@@ -8,7 +8,7 @@
   const persons = data.persons;
 </script>
 
-<CountdownClock />
+<CountdownClock isOverview={true} transitionName="countdown-clock" />
 
 <section class="squadpage">
   {#each persons as person}
