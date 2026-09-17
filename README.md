@@ -14,12 +14,12 @@ The point of this project is to see an overview of all the students and teachers
 
 ## Table of Contents
 
-1. [Description]()
-2. [Design]()
-3. [Mockups]()
-4. [Usage of the website]()
-5. [Features]()
-6. [Installation]()
+1. [Description](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#description)
+2. [Design](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#design)
+3. [Mockups](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#website-mockups)
+4. [Usage of the website](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#usage-of-the-website)
+5. [Features](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#usage-of-the-website)
+6. [Installation](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#usage-of-the-website)
 
 ## Description
 
