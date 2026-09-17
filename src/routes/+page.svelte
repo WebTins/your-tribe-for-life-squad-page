@@ -72,6 +72,19 @@
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
+
+          h2 {
+            font-family: "Just Me Again Down Here";
+            font-weight: 400;
+            font-size: 3rem;
+            line-height: 1;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-family: "Poppins";
+            font-size: 1rem;
+          }
         }
 
         .mugshot,
