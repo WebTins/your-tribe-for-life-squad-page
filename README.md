@@ -65,6 +65,17 @@ After looking for inspiration we've voted for the best design and eventually we 
 
 <img width="730" height="267" alt="image" src="https://github.com/user-attachments/assets/60ebf258-9160-405b-badd-4e0a47d2fb5d" />
 
+## Website Mockups
+
+### Overview Page
+
+<img width="854" height="384" alt="mockup-all-framed" src="https://github.com/user-attachments/assets/2a7518b2-c738-4cf8-8166-00e9b08d3ae9" />
+
+
+### Detail Page
+
+<img width="854" height="384" alt="mockup-all-framed (1)" src="https://github.com/user-attachments/assets/0a43595c-e36f-4641-b42c-b71fca83120f" />
+
 
 ## Usage of the Website
 
