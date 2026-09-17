@@ -1,3 +1,25 @@
+# Squadpage CoffeeTime
+
+In this project we had to create a squadpage of the 2nd year students and teachers of our squad in SvelteKit. This is our first project working with a framework where we have learned a lot of new things with SvelteKit where we use HTML, CSS and JS. 
+
+The point of this project is to see an overview of all the students and teachers where you are able to see the details of a person on another page.
+
+**Team of Developers**
+
+- [Tin](https://github.com/WebTins)
+- [Isaac](https://github.com/IsaacEswa)
+- [Jasin](https://github.com/JasinAhmed)
+
+## Table of Contents
+
+1. [Description]()
+2. [Design]()
+3. [Mockups]()
+4. [Usage of the website]()
+5. [Features]()
+6. [Code conventions]()
+7. [Installation]()
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
