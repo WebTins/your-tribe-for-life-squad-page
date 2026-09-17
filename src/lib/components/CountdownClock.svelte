@@ -2,9 +2,12 @@
 	import { onMount } from 'svelte'
 	import logo from '$lib/assets/2G.png'
 
+	let { isOverview = false } = $props()
+
 	let hours = $state(0)
 	let minutes = $state(0)
 	let seconds = $state(0)
+	let { transitionName = 'countdown-clock' } = $props()
 
 	function updateCountdown() {
 		const now = new Date()
@@ -37,12 +40,21 @@
 	})
 </script>
 
-<div class="countdown-wrapper">
+<div class="countdown-wrapper" style="view-transition-name: {transitionName};">
 	<header class="countdown-clock">
-		<a href="/" class="squad-info">
-			<img src={logo} alt="2G Squadpage logo" />
-			<p>Squadpage</p>
-		</a>
+		{#if isOverview}
+			<h1 class="squad-title">
+				<a href="/" class="squad-info">
+					<img src={logo} alt="2G" />
+					<span>Squadpage</span>
+				</a>
+			</h1>
+		{:else}
+			<a href="/" class="squad-info">
+				<img src={logo} alt="2G Squadpage" />
+				<span>Squadpage</span>
+			</a>
+		{/if}
 
 		<div class="coffee-time">
 			<time>
@@ -99,6 +111,12 @@
 				0 100%
 			);
 
+			.squad-title {
+				margin: 0;
+				font-size: inherit;
+				line-height: inherit;
+			}
+
 			.squad-info {
 				display: flex;
 				flex-direction: column;
@@ -113,11 +131,13 @@
 					height: auto;
 				}
 
-				p {
-					margin: -0.5rem 0 0;
+				span {
+					margin-top: -0.5rem;
 
 					font-family: "Poppins";
 					font-size: 1rem;
+					font-weight: 400;
+					line-height: 1.5;
 				}
 			}
 
