@@ -196,6 +196,9 @@ You can preview the production build with `npm run preview`.
 - Svelte `onMount`  
   https://svelte.dev/docs/svelte/lifecycle-hooks
 
+- SvelteKit view-transitions
+  https://svelte.dev/blog/view-transitions
+
 - MDN Date  
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
@@ -229,6 +232,4 @@ You can preview the production build with `npm run preview`.
 - MDN clip-path  
   https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
 
-- SvelteKit view-transitions
-  https://svelte.dev/blog/view-transitions
 
