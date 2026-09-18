@@ -183,3 +183,49 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+
+## Sources
+
+- Svelte `$state`  
+  https://svelte.dev/docs/svelte/$state
+
+- Svelte `$lib`
+  https://svelte.dev/docs/kit/$lib
+
+- Svelte `onMount`  
+  https://svelte.dev/docs/svelte/lifecycle-hooks
+
+- MDN Date  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+- MDN Date.setHours()  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setHours
+
+- MDN Date.setDate()  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate
+
+- MDN Math.floor()  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+
+- MDN Remainder operator  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
+
+- MDN setInterval()  
+  https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval
+
+- MDN clearInterval()  
+  https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval
+
+- MDN String.padStart()  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+
+- MDN CSS position  
+  https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+- MDN justify-content  
+  https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+
+- MDN clip-path  
+  https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+
