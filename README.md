@@ -18,8 +18,8 @@ The point of this project is to see an overview of all the students and teachers
 2. [Design](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#design)
 3. [Mockups](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#website-mockups)
 4. [Usage of the website](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#usage-of-the-website)
-5. [Features](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#usage-of-the-website)
-6. [Installation](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#usage-of-the-website)
+5. [Features](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#features)
+6. [Installation](https://github.com/WebTins/your-tribe-for-life-squad-page/blob/main/README.md#installation)
 
 ## Description
 
@@ -143,7 +143,9 @@ https://github.com/user-attachments/assets/bd887149-82de-481a-9657-4080d2acfa2d
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Creating a project
+## Installation
+
+### Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
 
@@ -159,7 +161,7 @@ To recreate this project with the same configuration:
 npx sv@0.17.0 create --template minimal --no-types --install npm ./
 ```
 
-## Developing
+### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -170,7 +172,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
