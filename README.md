@@ -229,3 +229,6 @@ You can preview the production build with `npm run preview`.
 - MDN clip-path  
   https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
 
+- SvelteKit view-transitions
+  https://svelte.dev/blog/view-transitions
+
