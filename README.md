@@ -196,7 +196,8 @@ You can preview the production build with `npm run preview`.
 - Svelte `onMount`  
   https://svelte.dev/docs/svelte/lifecycle-hooks
 
-- SvelteKit view-transitions
+- SvelteKit `view-transitions`
+  
   https://svelte.dev/blog/view-transitions
 
 - MDN Date  
