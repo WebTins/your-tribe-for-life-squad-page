@@ -141,6 +141,132 @@ https://github.com/user-attachments/assets/bd887149-82de-481a-9657-4080d2acfa2d
 </style>
 ```
 
+### Custom Image Shapes with Clip-path
+
+The profile images have custom shapes created with the CSS `clip-path` property. The `polygon()` function defines different points around the image. This gives the profile pictures a custom shape instead of a standard rectangular shape.
+
+```css
+.masked-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  clip-path: polygon(
+    24% 4%,
+    71% 14%,
+    78% 47%,
+    72% 84%,
+    24% 89%,
+    17% 64%
+  );
+}
+```
+
+Every second card uses a mirrored version of the shape. This creates more variation between the profile pictures.
+
+```css
+.person-card-wrapper:nth-child(4n + 2) .masked-image,
+.person-card-wrapper:nth-child(4n + 4) .masked-image {
+  clip-path: polygon(
+    76% 4%,
+    29% 14%,
+    22% 47%,
+    28% 84%,
+    76% 89%,
+    83% 64%
+  );
+
+  transform: scaleX(-1);
+}
+```
+
+### Image Hover Effect
+
+The profile images are black and white by default. When a visitor hovers over or focuses on a profile card, the original colours become visible.
+
+```css
+.masked-image {
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.person-card-wrapper:hover .mugshot .masked-image,
+.person-card-wrapper:focus .mugshot .masked-image {
+  filter: grayscale(0);
+}
+```
+
+The transition creates a smooth change between black and white and the original colours.
+
+### Optimised Images
+
+The profile pictures use the HTML `<picture>` element. This allows the browser to load the image as AVIF or WebP.
+
+```svelte
+<picture class="mugshot">
+  <source
+    type="image/avif"
+    srcset="https://fdnd.directus.app/assets/{person.mugshot_year2}?fit=cover&format=avif&height=700&quality=80"
+  />
+
+  <source
+    type="image/webp"
+    srcset="https://fdnd.directus.app/assets/{person.mugshot_year2}?fit=cover&format=webp&height=700&quality=80"
+  />
+
+  <img
+    class="masked-image"
+    src="https://fdnd.directus.app/assets/{person.mugshot_year2}?height=700&quality=80"
+    alt="Afbeelding van {person.name}"
+  />
+</picture>
+```
+
+These image formats can reduce the file size and improve the loading speed of the website. The standard `<img>` element is used as a fallback.
+
+### Placeholder Image
+
+When a person does not have a profile picture, the website displays a placeholder image. This prevents broken images and empty spaces from appearing on the page.
+
+```svelte
+{#if person.mugshot}
+  <picture class="mugshot">
+    <!-- Profile image -->
+  </picture>
+{:else}
+  <img
+    class="masked-image placeholder"
+    src={placeholder}
+    alt="Geen afbeelding beschikbaar"
+  />
+{/if}
+```
+
+### Responsive Layout
+
+The overview page uses CSS Grid. The number of columns changes based on the width of the screen.
+
+```css
+.squadpage {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .squadpage {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .squadpage {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}
+```
+
+The page displays one column on mobile devices, two columns on tablets and four columns on larger screens.
+
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
 ## Installation
