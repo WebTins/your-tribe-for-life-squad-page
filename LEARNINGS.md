@@ -57,3 +57,43 @@ I do not have any major points for improvement. The collaboration with Tin went 
 ### What am I proud of about Tin?
 
 I am proud of Tin for always being reliable and willing to help others. He was consistently involved in the project and made a positive contribution to the team.
+
+---
+
+## Feedback from Isaac to Jasin
+
+### How did I experience Jasin as a team member?
+
+Jasin is a good team member. He initiates the daily stand-ups, is good with Git, and responds quickly. He is always present and often checks if everything is going well with the team. He picks up tasks quickly and explains things when we do not understand them.
+
+### What tips do I have for Jasin?
+
+Try to stick to the design from the start next time. This will save time and effort. Other than that, keep doing what you are doing. It was a great collaboration!
+
+### What could Jasin change to make the collaboration better?
+
+The collaboration went well, and I do not have any major points for improvement. One thing that could make it even better is to keep discussing design choices with the team before starting implementation, so we can make sure everyone is on the same page.
+
+### What am I proud of about Jasin?
+
+I am proud of how involved Jasin was in the project, how he took initiative, and how quickly he picked up tasks. He was also able to adapt quickly when things were not going as planned.
+
+---
+
+## Feedback from Isaac to Tin
+
+### How did I experience Tin as a team member?
+
+Tin is a good team member. He communicates clearly and effectively. He writes clean and semantic code, distributes tasks well, and gives good feedback.
+
+### What tips do I have for Tin?
+
+Share what you have learned with the team, and explain things to your teammates when you discover something new or learn how to do something. This can help everyone grow and learn from each other.
+
+### What could Tin change to make the collaboration better?
+
+The collaboration went well, and I do not have any major points for improvement. One thing that could make it even better is to involve the team a little more when making decisions about implementation, so everyone stays informed and can contribute.
+
+### What am I proud of about Tin?
+
+I am proud of how carefully Tin codes, how he creates issues right away, and how he keeps the project clean and organized. He actively contributes to the team and makes sure the project keeps moving forward.
