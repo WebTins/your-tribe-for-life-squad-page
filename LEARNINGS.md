@@ -97,3 +97,45 @@ The collaboration went well, and I do not have any major points for improvement.
 ### What am I proud of about Tin?
 
 I am proud of how carefully Tin codes, how he creates issues right away, and how he keeps the project clean and organized. He actively contributes to the team and makes sure the project keeps moving forward.
+
+
+---
+
+## Feedback from Tin to Isaac
+
+### How did I experience Isaac as a team member?
+
+Isaac is an amazing designer and knows how to implement his design in code. He's a great communicator and makes nice code structure that meets the requirements of our code conventions. When reviewing a pull request, he gives great feedback that I can learn from.
+
+### What tips do I have for Isaac?
+
+When starting with a project, we should always start with mobile first and then work our way up to other devices. This way it would prevent us having to change our code a lot. 
+
+### What could Isaac change to make the collaboration better?
+
+I don't have any suggestions of improvement for Isaac apart from working Mobile first. I am very glad with the collaboration we've had.
+
+### What am I proud of about Isaac?
+
+I am very proud of the way he came up with great designs for this project. Design is something I struggle with and he had a great vision for this project which has helped us start with the project quicker than I thought. But I am also proud with the code he has made for the functional website.
+
+---
+
+## Feedback from Tin to Jasin
+
+### How did I experience Jasin as a team member?
+
+Jasin is a great teammember that reminded us to do daily-stand-ups. He always communicated with the team about his availabilty and his progress of this project. Im glad Jasin was able to help with the feedback we had to resolve during the last week of this project.
+
+### What tips do I have for Jasin?
+
+Try to stick with the design and ask more questions if things aren't working out with the code and design.
+
+### What could Jasin change to make the collaboration better?
+
+I do not have many suggested improvements other transparancy if things aren't going well with the design.
+
+### What am I proud of about Jasin?
+
+I'm very proud of Jasin his work and communication during this project. I am glad we got things done as we had planned. Also picking up the feedback and resolving them to make the website better.
+
